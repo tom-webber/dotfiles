@@ -1,0 +1,88 @@
+[user]
+name = Tom Webber
+email = tomwebber92+github@gmail.com
+
+[init]
+defaultBranch = main
+
+[core]
+editor = code --wait --new-window
+precomposeunicode = true
+
+[color]
+ui = auto
+
+[diff]
+tool = vscode
+
+[difftool "vscode"]
+cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+tool = vscode
+
+[mergetool "vscode"]
+cmd = code --wait $MERGED
+
+[push]
+autoSetupRemote = true
+
+[pull]
+ff = only
+
+[credential]
+helper = manager
+# Fall back to no helper if credential-manager is not found. This eliminates an annoying warning.
+helper = ""
+
+[includeIf "gitdir:~/personal/"]
+path = ~/.config/git/config
+
+[includeIf "gitdir:~/work/"]
+path = ~/.config/git/config.work
+
+[alias]
+a = add
+aa = add --all
+b = branch
+br = branch
+c = commit -m
+ci = commit -m
+d = diff
+ds = diff --staged
+sw = switch
+
+# Show the git configuration
+cfg = config --global --list
+
+# Show working tree status using the short format
+s = status -s
+st = status -s
+
+# Only merge if fast-forward is possible
+mergeff = merge --ff-only
+
+# View abbreviated commit log
+l = log --pretty=oneline --graph --decorate --abbrev-commit -n 25
+ll = log --pretty=oneline --graph --decorate --abbrev-commit
+
+# Show details about the last commit
+last = log -1 HEAD --stat --abbrev-commit
+
+# Amend the currently staged files to the latest commit
+amend = commit --amend --no-edit
+
+# Amend the currently staged files to the latest commit, including unstaged files
+fix = commit --all --amend --no-edit
+
+# Show all gitignored files
+others = ls-files --others --ignored --exclude-from=.gitignore
+
+# Graph of commits
+graph = log --graph --color --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n"
+
+# Show contributors sorted by number of commits
+contributors = shortlog --summary --numbered
+
+# Search commit messages
+search = !git rev-list --all --abbrev-commit | xargs rg -F
