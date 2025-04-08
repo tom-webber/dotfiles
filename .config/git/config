@@ -1,5 +1,6 @@
 [user]
 name = Tom Webber
+email = tomwebber92+github@gmail.com
 
 [init]
 defaultBranch = main

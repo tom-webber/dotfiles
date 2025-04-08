@@ -6,4 +6,5 @@ antidote load
 
 # starship
 export STARSHIP_CONFIG="/Users/tom.webber/.config/starship/starship.toml"
+
 eval "$(starship init zsh)"
