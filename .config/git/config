@@ -1,6 +1,5 @@
 [user]
 name = Tom Webber
-email = tomwebber92+github@gmail.com
 
 [init]
 defaultBranch = main
@@ -8,6 +7,7 @@ defaultBranch = main
 [core]
 editor = code --wait --new-window
 precomposeunicode = true
+hooksPath = ~/.git-hooks
 
 [color]
 ui = auto
@@ -25,9 +25,11 @@ tool = vscode
 cmd = code --wait $MERGED
 
 [push]
+default = simple
 autoSetupRemote = true
 
 [pull]
+rebase = true
 ff = only
 
 [credential]
@@ -36,7 +38,7 @@ helper = manager
 helper = ""
 
 [includeIf "gitdir:~/personal/"]
-path = ~/.config/git/config
+path = ~/.config/git/config.personal
 
 [includeIf "gitdir:~/work/"]
 path = ~/.config/git/config.work

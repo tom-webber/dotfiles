@@ -5,5 +5,5 @@ source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
 # starship
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export STARSHIP_CONFIG="/Users/tom.webber/.config/starship/starship.toml"
 eval "$(starship init zsh)"
