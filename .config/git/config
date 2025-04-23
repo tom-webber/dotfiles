@@ -8,7 +8,7 @@ defaultBranch = main
 [core]
 editor = code --wait --new-window
 precomposeunicode = true
-hooksPath = ~/.git-hooks
+hooksPath = ~/.config/git/hooks
 
 [color]
 ui = auto

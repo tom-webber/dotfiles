@@ -1,0 +1,6 @@
+# Run local pre-commit hook if it exists
+if [ -e ./.git/hooks/pre-commit ]; then
+  if ! (./.git/hooks/pre-commit "$@"); then
+    exit 1;
+  fi
+fi

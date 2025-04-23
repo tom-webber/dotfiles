@@ -8,3 +8,8 @@ antidote load
 export STARSHIP_CONFIG="/Users/tom.webber/.config/starship/starship.toml"
 
 eval "$(starship init zsh)"
+
+eval "$(pyenv init --path)"
+
+eval "$(uv generate-shell-completion zsh)"
+# eval "$(uvx generate-shell-completion zsh)"
