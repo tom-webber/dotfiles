@@ -25,4 +25,10 @@ if [ "$system_type" = "Darwin" ]; then
     defaults write com.googlecode.iterm2 PrefsCustomFolder "$HOME/.config/iterm2"
   fi
 
+  if ([ -d "/Applications/Visual Studio Code.app" ] || [ -d "$HOME/Applications/Visual Studio Code.app" ]) && [ -f "$HOME/.config/vscode/settings.json" ]; then
+    echo "Applying custom VSCode settings"
+    mkdir -p "$HOME/Library/Application Support/Code/User"
+    cp "$HOME/.config/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+  fi
+
 fi
