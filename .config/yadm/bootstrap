@@ -12,7 +12,7 @@ if [ "$system_type" = "Darwin" ]; then
 
   if [ -f "$HOME/.config/brew/Brewfile" ]; then
     echo "Updating homebrew bundle"
-    brew bundle --global --file ~/.config/brew/Brewfile
+    brew bundle --file ~/.config/brew/Brewfile
   fi
 
   if [ ! -d "/Applications/iTerm.app" ] && [ ! -d "$HOME/Applications/iTerm.app" ]; then
